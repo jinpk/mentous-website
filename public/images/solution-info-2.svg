@@ -1,0 +1,10 @@
+<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="50" height="50" rx="25" fill="#F3EFFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M37 30.332V19.668C37 18.716 36.4907 17.836 35.664 17.364L26.32 12.0134C25.5027 11.5454 24.4987 11.5454 23.6813 12.0134L14.336 17.364C13.5093 17.8374 13 18.716 13 19.668V30.3307C13 31.2827 13.5093 32.1627 14.336 32.6347L23.68 37.9854C24.4973 38.4534 25.5013 38.4534 26.3187 37.9854L35.6627 32.6347C36.4907 32.1627 37 31.284 37 30.332V30.332Z" stroke="#202020" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.0001 25L13.3867 31.7067" stroke="#202020" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25 24.9999L36.6133 18.2932" stroke="#202020" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.9999 25.0001V11.6667" stroke="#202020" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.9999 25V38.3333" stroke="#202020" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.0001 24.9999L13.3867 18.2932" stroke="#202020" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25 25L36.6133 31.7067" stroke="#202020" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -14,7 +14,7 @@ export const Footer = () => {
                         <Link href={'/'}>
                             <div className={'w-[150px] h-[24px] relative'}>
                                 <Image
-                                    src={'/images/logo.png'}
+                                    src={'/images/logo.svg'}
                                     alt={'Logo'}
                                     fill
                                 />

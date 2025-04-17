@@ -2,6 +2,7 @@
 
 :root {
     --max-width: 1440px;
+    --nav-height: 80px;
     --width-card: 440px;
 }
 
@@ -11,6 +12,8 @@
     --color-primary: #0f0f0f;
     --color-primary-20: #292929;
     --color-red: #ff0000;
+    --color-accent-teal: #1fbfce;
+    --color-accent-light-blue: #eaf2ff;
 
     --radius: 40px;
 
@@ -25,6 +28,9 @@
     --color-neutral-100: #ffffff;
 
     --color-sunset: #f4511e;
+    --color-accent-purple: #7e1cff;
+    --color-accent-blue: #1c5cff;
+    --color-accent-light-teal: #dbf7fb;
 }
 
 body {
@@ -37,10 +43,70 @@ button {
 }
 
 @layer components {
+    .text-t1-medium {
+        font-size: 18px;
+        line-height: 26px;
+    }
+
+    .text-t1-bold {
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: bold;
+    }
+
+    .text-h2-medium {
+        font-size: 40px;
+        line-height: 58px;
+    }
+
+    .text-h2-bold {
+        font-size: 40px;
+        line-height: 58px;
+        font-weight: bold;
+    }
+
+    .text-h4-medium {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .text-h4-bold {
+        font-size: 24px;
+        line-height: 36px;
+        font-weight: bold;
+    }
+
+    .text-h5-medium {
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    .text-h5-bold {
+        font-size: 20px;
+        line-height: 32px;
+        font-weight: bold;
+    }
+
+    .text-h3-bold {
+        font-size: 32px;
+        line-height: 48px;
+        font-weight: bold;
+    }
+
+    .text-b3-medium {
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .text-b1-medium {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
     .main {
         max-width: var(--max-width);
+        padding: 0 32px;
         width: 100%;
         margin: auto;
-        padding: 80px 32px;
     }
 }

@@ -2,23 +2,42 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Button } from '@/components/button'
 import clsx from 'clsx'
+import { useEffect, useState } from 'react'
+import { CtaJoinButton } from '@/app/auth/components/cta-join-button'
 
 export const Nav = () => {
+    const [scrolled, setScrolled] = useState(false)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setScrolled(true)
+            } else {
+                setScrolled(false)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return (
         <header
             className={clsx(
-                'w-full max-w-[var(--max-width)] mx-auto py-6 px-8 sticky top-0 backdrop-blur-[56px] bg-white/80'
+                'w-full max-w-[var(--max-width)] mx-auto py-6 px-8 sticky top-0 z-[100]'
             )}
         >
             <nav
                 className={clsx(
-                    'h-20 px-8 pr-4 rounded grid grid-cols-3 items-center'
+                    'h-[var(--nav-height)] px-8 pr-4 rounded grid grid-cols-3 items-center',
+                    scrolled
+                        ? 'bg-white/64 backdrop-blur-[56px] opacity-100'
+                        : 'bg-white/100 opacity-100'
                 )}
             >
                 <Link href={'/'} className={'w-[188px] h-[30px] relative'}>
-                    <Image src={'/images/logo.png'} alt={'Logo'} fill />
+                    <Image src={'/images/logo.svg'} alt={'Logo'} fill />
                 </Link>
 
                 <div className={'grid auto-cols-auto justify-center'}>
@@ -49,9 +68,7 @@ export const Nav = () => {
                 </div>
 
                 <div className={'flex justify-end'}>
-                    <Link href={'/'}>
-                        <Button>멤버십 무료가입</Button>
-                    </Link>
+                    <CtaJoinButton />
                 </div>
             </nav>
         </header>
