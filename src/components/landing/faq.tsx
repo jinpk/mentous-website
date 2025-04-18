@@ -57,7 +57,9 @@ export const Faq = (props: FaqProps) => {
                                     'pt-[28px] text-neutral-0 text-h5-medium'
                                 }
                             >
-                                {props.answer}
+                                <span className={'whitespace-pre-line'}>
+                                    {props.answer}
+                                </span>
                             </div>
                         )}
                     </div>

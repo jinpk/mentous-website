@@ -26,8 +26,8 @@ const fontGmarketSans = localFont({
 })
 
 export const metadata: Metadata = {
-    title: '멘토스 | 유튜버 성장 커뮤니티',
-    description: '유튜브 채널 성장 비밀, 멘토스 커뮤니티',
+    title: '유튜브 채널 성장 커뮤니티, 멘토스',
+    description: '유튜브 채널 성장은 멘토스',
 }
 
 export default function RootLayout({

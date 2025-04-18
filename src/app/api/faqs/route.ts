@@ -1,20 +1,22 @@
 import { NextResponse } from 'next/server'
-import admin from 'firebase-admin'
-
-const cert: admin.AppOptions = JSON.parse(process.env.FIREBASE_CERT as string)
-admin.initializeApp(cert)
-const db = admin.firestore()
+import { db } from '@/lib/firebase'
 
 export async function GET() {
-    const querySnapshot = await db.collection('faqs').get()
+    const faqsRef = db.collection('faqs')
 
-    const data: admin.firestore.DocumentData[] = []
+    const querySnapshot = await faqsRef.listDocuments()
 
-    querySnapshot.forEach((doc) => {
-        data.push(doc.data())
-    })
+    const faqs: object[] = []
+
+    for (const faqRef of querySnapshot) {
+        const doc = await faqRef.get()
+        const data = doc.data()
+        if (data) {
+            faqs.push(data)
+        }
+    }
 
     return NextResponse.json({
-        faqs: data,
+        faqs,
     })
 }
