@@ -21,11 +21,12 @@ export const Button = (
         <button
             {...props}
             className={clsx(
-                'transition-all',
+                'transition-all ',
                 colorClasses[props.color || 'primary'],
-                'py-3 px-4 rounded max-md:py-2 max-md:px-3',
+                'py-3 px-4 rounded',
                 'text-b1-medium',
                 'cursor-pointer',
+                'disabled:bg-neutral-70 disabled:text-neutral-30 disabled:cursor-auto',
                 props.className
             )}
         >

@@ -1,7 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export const Footer = () => {
+    const pathname = usePathname()
+    if (pathname.startsWith('/signup')) return null
     return (
         <div className={'flex flex-col'}>
             <div

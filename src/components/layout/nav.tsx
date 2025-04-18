@@ -144,7 +144,10 @@ export const NavActions = () => {
             className={'flex justify-end max-md:flex-col max-md:items-stretch'}
         >
             {session.data && (
-                <button onClick={() => signOut()} className={'group'}>
+                <button
+                    onClick={() => signOut()}
+                    className={'group max-md:hidden'}
+                >
                     <div
                         className={
                             'flex items-center space-x-2  text-neutral-30 group-hover:text-neutral-10'

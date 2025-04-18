@@ -21,7 +21,7 @@ export const EarlyAccessBoard = () => {
                     ></span>
                 </div>
                 <span className={'text-neutral-20 text-b2-medium'}>
-                    제품이 출시되면 카카오톡으로 알림을 보내드립니다
+                    제품이 출시되면 카카오톡으로 알림이 발송됩니다
                 </span>
             </div>
 

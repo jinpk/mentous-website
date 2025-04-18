@@ -28,9 +28,7 @@ export const Steps = ({ children }: { children: ReactNode }) => {
 
                         <div
                             className={clsx(
-                                index % 2 === 0
-                                    ? 'self-start'
-                                    : 'self-end max-sm:self-start',
+                                index % 2 === 0 ? 'self-start' : 'self-end',
                                 'w-auto'
                             )}
                         >

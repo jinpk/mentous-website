@@ -19,16 +19,16 @@ export const HeroSection = () => {
                 >
                     <h1>
                         <p className={'text-neutral-10'}>
-                            유튜브 채널 키우는 비밀,
+                            유튜브 채널 키우는 비밀
                         </p>
-                        <p className={'font-bold'}>‘멘토스’ 커뮤니티</p>
+                        <p className={'font-bold'}>‘멘토스’</p>
                     </h1>
                 </div>
 
                 <p className={'text-neutral-30 text-h5-medium'}>
                     채널 성장에 갈증을 느껴온 유튜버들이 직접 만든 서비스입니다.
                     <br />
-                    크리에이터들이 함께 배우고, 실험하고, 성장합니다.
+                    홍보하고, 배우고, 실험하며 성장합니다.
                 </p>
             </div>
 

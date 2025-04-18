@@ -17,9 +17,9 @@ export const SolutionSection = () => {
                     title={'콘텐츠 올리기'}
                     description={
                         <>
-                            내 콘텐츠를 커뮤니티에 올리면,
+                            내 콘텐츠를 서비스에 올리면,
                             <br />
-                            바로 채널 홍보가 시작됩니다
+                            바로 홍보와 개선이 시작됩니다
                         </>
                     }
                     image={
@@ -35,9 +35,9 @@ export const SolutionSection = () => {
                     title={'피드백 받고 배우기'}
                     description={
                         <>
-                            크리에이터들이 남기는 피드백으로,
+                            전문가와 유튜버가 남기는 피드백으로,
                             <br />
-                            실전 인사이트를 바로 얻을 수 있어요
+                            실전 인사이트를 바로 얻을 수 있어요.
                         </>
                     }
                     image={
@@ -53,11 +53,11 @@ export const SolutionSection = () => {
                     title={'개선하고 반영하기'}
                     description={
                         <>
-                            피드백으로 콘텐츠를 개선해 보세요
+                            피드백으로 콘텐츠를 개선해 보세요.
                             <br />
                             성과는 조회수, 시청 지속 시간 등의
                             <br />
-                            지표로 즉시 확인할 수 있어요
+                            지표로 즉시 확인할 수 있어요.
                         </>
                     }
                     image={
@@ -73,9 +73,9 @@ export const SolutionSection = () => {
                     title={'다른 콘텐츠로 배우기'}
                     description={
                         <>
-                            다른 사람의 콘텐츠와 피드백으로도
+                            다른 콘텐츠와 피드백으로도
                             <br />
-                            인사이트를 쌓을 수 있어요
+                            인사이트를 쌓을 수 있어요.
                         </>
                     }
                     image={
@@ -91,8 +91,8 @@ export const SolutionSection = () => {
                     title={'직접 참여하고 리워드 받기'}
                     description={
                         <>
-                            다른 콘텐츠에 피드백을 남기면 리워드가 쌓입니다
-                            <br />내 콘텐츠를 상단에 노출시키는 데 꼭 필요합니다
+                            다른 콘텐츠에 피드백을 남기면 리워드가 쌓입니다.
+                            <br />내 콘텐츠를 더 성장시키는 데 꼭 필요합니다.
                         </>
                     }
                     image={

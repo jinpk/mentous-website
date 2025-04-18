@@ -49,7 +49,7 @@ export const FeedbackForm = () => {
         >
             <div>
                 <div className={'text-h5-medium text-neutral-30'}>
-                    {!submiited && <p>유튜브 채널 키우는 비밀</p>}
+                    {!submiited && <p>유튜브 채널 성장은, 멘토스</p>}
                     {submiited && <p>피드백 전달 완료</p>}
                 </div>
                 <div className={'text-h2-bold text-primary'}>
@@ -64,7 +64,7 @@ export const FeedbackForm = () => {
             <div className={'text-h5-medium text-neutral-10'}>
                 {!submiited && (
                     <p>
-                        커뮤니티에 바라는 기능, 유튜버로써 어려웠던 점을
+                        서비스에 바라는 기능, 유튜버로써 어려웠던 점을
                         <br />
                         공유해 주시면 적극 반영할게요
                     </p>

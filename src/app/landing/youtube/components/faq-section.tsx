@@ -41,9 +41,9 @@ export const FaqSection = () => {
                 <span>
                     더 궁금한 사항이 있으신가요?
                     <br />
-                    커뮤니티에 바라는 기능 혹은 궁금한 점을 공유해 주세요!
+                    서비스에 바라는 기능 혹은 궁금한 점을 공유해 주세요!
                     <br />
-                    서비스에 반영됩니다
+                    적극 반영됩니다
                 </span>
                 <Link href={'/'}>
                     <Button color={'accent-blue'}>문의하기</Button>

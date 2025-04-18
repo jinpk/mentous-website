@@ -99,6 +99,12 @@ button {
         line-height: 22px;
     }
 
+    .text-b3-bold {
+        font-size: 14px;
+        line-height: 22px;
+        font-weight: bold;
+    }
+
     .text-b1-medium {
         font-size: 16px;
         line-height: 24px;
@@ -113,7 +119,7 @@ button {
         max-width: var(--max-width);
         padding: 0 32px;
         width: 100%;
-        margin: auto;
+        margin: 0 auto;
     }
 
     @media (max-width: 48rem) {

@@ -39,10 +39,10 @@ export const PricingSection = () => {
                         name={'콘텐츠 배너 게시권'}
                         price={'19,000원/월'}
                         guide={
-                            '게시 후, 다른 콘텐츠에 피드백을 남겨야 상단 노출이 유지됩니다'
+                            '게시 후, 다른 콘텐츠에 피드백을 남기면 아래 효과가 더 좋아집니다'
                         }
                         benefits={[
-                            '콘텐츠 커뮤니티 노출',
+                            '콘텐츠 전방위 게시',
                             '실전 중심 피드백 제공 (전문가 및 유튜버)',
                             '콘텐츠 SEO 노출 지원 외부 유입 증대',
                             '조회수 및 시청률 핵심 지표 향상',
@@ -57,7 +57,11 @@ export const PricingSection = () => {
 
 const PricingSectionTitle = () => {
     return (
-        <div className={'text-neutral-0 text-h2-medium text-center'}>
+        <div
+            className={
+                'text-neutral-0 text-h2-medium text-center flex flex-col items-start max-md:items-center'
+            }
+        >
             <div className={'flex items-center relative'}>
                 <Image
                     className={
@@ -70,7 +74,7 @@ const PricingSectionTitle = () => {
                 />
                 <span>콘텐츠 배너 게시로 누리는</span>
             </div>
-            <div className={'flex items-center flex-col relative text-center'}>
+            <div className={'flex items-center relative text-center'}>
                 <span className={'text-h2-bold'}>실전 성장 혜택</span>
                 <Image
                     className={

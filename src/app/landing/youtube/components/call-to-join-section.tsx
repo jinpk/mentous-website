@@ -20,13 +20,15 @@ export const CallToJoinSection = () => {
                         'text-neutral-0 text-h2-medium flex items-center flex-col'
                     }
                 >
-                    <span>지금 바로 무료 멤버십에 가입하고,</span>
-                    <span className={'text-h2-bold'}>
-                        성장하는 크리에이터들의
-                    </span>
+                    <span>지금 바로</span>
                     <span>
-                        <span className={'text-h2-bold'}>커뮤니티</span>에
-                        참여해보세요!
+                        <span className={'text-h2-bold'}>성장하는 유튜버</span>
+                        들의 <span className={'text-h2-bold'}>비밀</span>
+                    </span>
+
+                    <span>
+                        <span className={'text-h2-bold'}>멘토스</span>에
+                        가입하세요!
                     </span>
                 </div>
             </h2>

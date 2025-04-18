@@ -7,7 +7,7 @@ export default async function Home() {
     const session = await auth()
 
     if (!session) {
-        redirect('/signup')
+        redirect('/landing/youtube')
     }
 
     return (

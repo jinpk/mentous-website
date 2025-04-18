@@ -28,10 +28,10 @@ const fontGmarketSans = localFont({
 })
 
 export const metadata: Metadata = {
-    title: '유튜브 채널 성장 커뮤니티, 멘토스',
+    title: '유튜브 채널 성장 시스템, 멘토스',
     description: '유튜브 채널 성장은 멘토스',
     openGraph: {
-        title: '유튜브 채널 성장 커뮤니티, 멘토스',
+        title: '유튜브 채널 성장 시스템, 멘토스',
         description: '유튜브 채널 성장은 멘토스',
         url: 'https://www.mentous.xyz/',
         images: 'https://mentous.xyz/images/logo.png',

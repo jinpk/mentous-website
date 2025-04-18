@@ -13,6 +13,7 @@ export interface Feedback {
 
 export const createFeedback = async (request: CreateFeedbackRequest) => {
     const session = await auth()
+
     const faqsRef = db.collection('feedbacks')
 
     const querySnapshot = await faqsRef.add({
