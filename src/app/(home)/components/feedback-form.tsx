@@ -44,52 +44,38 @@ export const FeedbackForm = () => {
         <form
             onSubmit={form.handleSubmit(onSubmit)}
             className={
-                'flex flex-col space-y-6 text-center w-full max-w-[var(--width-card)] mx-auto'
+                'flex flex-col space-y-6 max-md:space-y-4 text-center w-full max-w-[var(--width-card)] max-md:max-w-full mx-auto'
             }
         >
             <div>
-                <>
+                <div className={'text-h5-medium text-neutral-30'}>
+                    {!submiited && <p>유튜브 채널 키우는 비밀</p>}
+                    {submiited && <p>피드백 전달 완료</p>}
+                </div>
+                <div className={'text-h2-bold text-primary'}>
                     {!submiited && (
-                        <p className={'text-[20px] text-neutral-30'}>
-                            유튜브 채널 키우는 비밀
-                        </p>
-                    )}
-                    {submiited && (
-                        <p className={'text-[20px] text-neutral-30'}>
-                            피드백 전달 완료
-                        </p>
-                    )}
-                </>
-                <>
-                    {!submiited && (
-                        <h1 className={'text-[40px] text-primary font-bold'}>
-                            {session.data?.user?.name ?? ''}님, 안녕하세요
-                        </h1>
+                        <h1>{session.data?.user?.name ?? ''}님, 안녕하세요</h1>
                     )}
 
-                    {submiited && (
-                        <h1 className={'text-[40px] text-primary font-bold'}>
-                            소중한 의견 감사합니다
-                        </h1>
-                    )}
-                </>
+                    {submiited && <h1>소중한 의견 감사합니다</h1>}
+                </div>
             </div>
 
-            <>
+            <div className={'text-h5-medium text-neutral-10'}>
                 {!submiited && (
-                    <p className={'text-[20px] text-neutral-10'}>
+                    <p>
                         커뮤니티에 바라는 기능, 유튜버로써 어려웠던 점을
                         <br />
                         공유해 주시면 적극 반영할게요
                     </p>
                 )}
                 {submiited && (
-                    <p className={'text-[20px] text-neutral-10'}>
+                    <p>
                         창작자로서 느끼신 점은 누구보다 소중해요
                         <br />더 나은 서비스를 위해 적극 반영할게요!
                     </p>
                 )}
-            </>
+            </div>
 
             <>
                 {!submiited && (
@@ -102,9 +88,12 @@ export const FeedbackForm = () => {
                     <Image
                         src={'/images/employee-contract.gif'}
                         alt={'Submitted'}
-                        width={160}
-                        height={160}
-                        className={'self-center'}
+                        width={0}
+                        height={0}
+                        className={
+                            'self-center w-[160px] h-auto max-md:w-[120px]'
+                        }
+                        sizes={'100vw'}
                     />
                 )}
             </>

@@ -23,7 +23,7 @@ export const Button = (
             className={clsx(
                 'transition-all',
                 colorClasses[props.color || 'primary'],
-                'py-3 px-4 rounded',
+                'py-3 px-4 rounded max-md:py-2 max-md:px-3',
                 'text-b1-medium',
                 'cursor-pointer',
                 props.className

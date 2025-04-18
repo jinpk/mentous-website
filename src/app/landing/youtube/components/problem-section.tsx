@@ -6,26 +6,21 @@ export const ProblemSection = () => {
     return (
         <Section
             title={
-                <div className={'text-neutral-0 text-h2-medium'}>
+                <span>
                     내 채널,
                     <br />
                     대체 <span className={'text-h2-bold'}>어떻게</span> 성장
                     시켜야하지?
-                </div>
+                </span>
             }
-            label={<p className={'text-t1-bold text-sunset'}>Problem</p>}
+            label={<p className={' text-sunset'}>Problem</p>}
         >
             <Problems>
                 <Problem
                     title={'지표작업'}
                     number="01"
                     image={
-                        <Image
-                            src={'/images/chart.svg'}
-                            width={32}
-                            height={32}
-                            alt={'chart'}
-                        />
+                        <Image src={'/images/chart.svg'} fill alt={'chart'} />
                     }
                 >
                     댓글·좋아요·팔로워 조작? 알고리즘에 오히려 역효과예요.
@@ -41,8 +36,7 @@ export const ProblemSection = () => {
                     image={
                         <Image
                             src={'/images/book-read.svg'}
-                            width={32}
-                            height={32}
+                            fill
                             alt={'book-read'}
                         />
                     }
@@ -61,8 +55,7 @@ export const ProblemSection = () => {
                     image={
                         <Image
                             src={'/images/document-chart.svg'}
-                            width={32}
-                            height={32}
+                            fill
                             alt={'document-chart'}
                         />
                     }

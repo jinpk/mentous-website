@@ -83,7 +83,7 @@ export const Problem = ({
     return (
         <div
             className={clsx(
-                'rounded p-8  flex flex-col aspect-square transition-all max-md:aspect-auto max-md:space-y-6',
+                'rounded max-md:rounded-[28px] p-8 max-md:p-5  flex flex-col aspect-square transition-all max-md:aspect-auto max-md:space-y-6 max-md:min-h-[200px]',
                 'transition-colors duration-100',
                 focused
                     ? '!text-neutral-0 bg-[#FFEAE2] bg-light-sunset'
@@ -94,11 +94,17 @@ export const Problem = ({
                 <div className={'flex items-center justify-between'}>
                     <div
                         className={clsx(
-                            'flex items-center justify-center w-[58px] h-[58px]  rounded-full',
+                            'flex items-center justify-center w-[58px] h-[58px]  rounded-full max-md:w-8 max-md:h-8',
                             focused ? 'bg-neutral-0' : 'bg-neutral-10'
                         )}
                     >
-                        {image}
+                        <div
+                            className={
+                                'relative w-8 h-8 max-md:w-[18px] max-md:h-[18px]'
+                            }
+                        >
+                            {image}
+                        </div>
                     </div>
 
                     <span className={'text-h5-medium'}>{number}</span>

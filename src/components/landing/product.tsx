@@ -10,7 +10,7 @@ export const Product = (props: {
     return (
         <div
             className={
-                'flex flex-col rounded bg-neutral-95 py-10 px-8 space-y-[42px]'
+                'flex flex-col rounded bg-neutral-95 py-10 px-8 space-y-[42px] max-md:space-y-6 max-md:rounded-[28px] max-md:py-6 max-md:px-5'
             }
         >
             <div className={'space-y-2'}>
@@ -35,8 +35,11 @@ export const Product = (props: {
                             <Image
                                 src={'/images/product-benefit-icon.svg'}
                                 alt={'Benefit'}
-                                width={18}
-                                height={18}
+                                className={
+                                    'w-[18px] h-[18px] max-md:w-4 max-md:h-4'
+                                }
+                                width={0}
+                                height={0}
                             />
                             <span>{child}</span>
                         </div>

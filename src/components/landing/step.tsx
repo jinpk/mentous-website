@@ -21,15 +21,17 @@ export const Steps = ({ children }: { children: ReactNode }) => {
                                 alt={'to even'}
                                 width={0}
                                 height={0}
-                                className={'h-auto w-[50%]'}
+                                className={'h-auto w-[50%] max-md:w-[80%]'}
                                 sizes={'100vw'}
                             />
                         )}
 
                         <div
                             className={clsx(
-                                index % 2 === 0 ? 'self-start' : 'self-end',
-                                'w-full max-w-[63%]'
+                                index % 2 === 0
+                                    ? 'self-start'
+                                    : 'self-end max-sm:self-start',
+                                'w-auto'
                             )}
                         >
                             {child}
@@ -48,11 +50,17 @@ export const Step = (props: {
     image: ReactNode
 }) => {
     return (
-        <div className={'py-[42px] px-8  space-x-[28px] flex items-center'}>
-            <div className={'h-40 aspect-square relative'}>{props.image}</div>
+        <div
+            className={
+                'py-[42px] max-md:py-[21px]  px-8 max-md:px-0  space-x-[28px] max-md:space-x-5 flex items-center'
+            }
+        >
+            <div className={'h-40 max-md:h-[104px] aspect-square relative'}>
+                {props.image}
+            </div>
             <div
                 className={
-                    'flex flex-col space-y-4 text-neutral-0 text-h5-medium'
+                    'flex flex-col space-y-4  max-md:space-y-2 text-neutral-0 text-h5-medium flex-1'
                 }
             >
                 <p className={''}>Step {props.number}</p>

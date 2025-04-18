@@ -8,18 +8,28 @@ export const PricingSection = () => {
             title={<PricingSectionTitle />}
             label={<p className={'text-t1-bold text-accent-teal'}>Pricing</p>}
         >
-            <div className={'grid grid-cols-3 gap-x-[28px] '}>
-                <div className={'relative  flex items-center justify-center '}>
+            <div
+                className={
+                    'grid grid-cols-3 gap-x-[28px] max-md:flex max-md:flex-col max-md:space-y-5'
+                }
+            >
+                <div
+                    className={
+                        'relative  flex flex-col items-center justify-center'
+                    }
+                >
                     <Image
                         src={'/images/online-feedback.gif'}
                         alt={'Online Feedback'}
                         width={0}
                         height={0}
-                        className={'z-10 w-[80%] aspect-square'}
+                        className={
+                            'z-10 w-[80%] aspect-square max-md:w-[73%] max-md:self-end'
+                        }
                     />
                     <div
                         className={
-                            'absolute left-0 top-0 bottom-0 w-full max-w-[33%] bg-accent-light-teal rounded'
+                            'absolute left-0 top-0 bottom-0 w-full max-w-[33%] bg-accent-light-teal rounded max-md:max-w-[40%] max-md:rounded-[28px]'
                         }
                     ></div>
                 </div>
@@ -47,23 +57,29 @@ export const PricingSection = () => {
 
 const PricingSectionTitle = () => {
     return (
-        <div className={'text-neutral-0 text-h2-medium'}>
-            <div className={'flex items-center space-x-3'}>
+        <div className={'text-neutral-0 text-h2-medium text-center'}>
+            <div className={'flex items-center relative'}>
                 <Image
+                    className={
+                        'absolute -left-[62px] w-[50px] h-[50px] max-md:w-[28px] max-md:h-[28px] max-md:-left-[36px]'
+                    }
                     src={'/images/pricing-info-1.svg'}
                     alt={'Solution'}
-                    width={50}
-                    height={50}
+                    width={0}
+                    height={0}
                 />
                 <span>콘텐츠 배너 게시로 누리는</span>
             </div>
-            <div className={'flex items-center space-x-3'}>
+            <div className={'flex items-center flex-col relative text-center'}>
                 <span className={'text-h2-bold'}>실전 성장 혜택</span>
                 <Image
+                    className={
+                        'absolute -right-[96px] w-[84px] h-[50px] max-md:w-[48px] max-md:h-[28px] max-md:-right-[8px] '
+                    }
                     src={'/images/pricing-info-2.svg'}
                     alt={'Solution'}
-                    width={84}
-                    height={50}
+                    width={0}
+                    height={0}
                 />
             </div>
         </div>

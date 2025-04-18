@@ -34,11 +34,15 @@ export const Faq = (props: FaqProps) => {
             >
                 <div
                     className={clsx(
-                        'px-8 py-10 flex  space-x-[28px] transition-all ',
+                        'px-8 py-10 flex max-md:px-3 max-md:py-4  space-x-[28px] max-md:space-x-3 transition-all ',
                         !opened && 'group-hover:bg-accent-light-blue'
                     )}
                 >
-                    <div className={'text-h5-medium text-neutral-10 min-w-12'}>
+                    <div
+                        className={
+                            'text-h5-medium text-neutral-10 min-w-12 max-md:min-w-[26px]'
+                        }
+                    >
                         Q{props.number}
                     </div>
 
@@ -54,7 +58,7 @@ export const Faq = (props: FaqProps) => {
                         {opened && (
                             <div
                                 className={
-                                    'pt-[28px] text-neutral-0 text-h5-medium'
+                                    'pt-[28px] max-md:pt-3 text-neutral-0 text-h5-medium'
                                 }
                             >
                                 <span className={'whitespace-pre-line'}>
@@ -65,7 +69,9 @@ export const Faq = (props: FaqProps) => {
                     </div>
 
                     <div>
-                        <div className={'w-9 h-9 relative'}>
+                        <div
+                            className={'w-9 h-9 relative max-md:w-5 max-md:h-5'}
+                        >
                             <svg
                                 width="100%"
                                 height="100%"

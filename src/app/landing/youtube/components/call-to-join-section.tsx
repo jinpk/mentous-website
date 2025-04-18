@@ -3,8 +3,11 @@ import { CtaJoinButton } from '@/components/landing/cta-join-button'
 
 export const CallToJoinSection = () => {
     return (
-        <div className={'flex flex-col items-center space-y-6'}>
+        <div
+            className={'flex flex-col items-center space-y-6 max-md:space-y-4'}
+        >
             <Image
+                className={'w-16 h-12 max-md:w-8 max-md:h-6'}
                 src={'/images/icon.svg'}
                 alt={'Solution'}
                 width={64}

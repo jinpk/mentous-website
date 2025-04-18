@@ -104,11 +104,72 @@ button {
         line-height: 24px;
     }
 
+    .text-b2-medium {
+        font-size: 15px;
+        line-height: 22px;
+    }
+
     .main {
         max-width: var(--max-width);
         padding: 0 32px;
         width: 100%;
         margin: auto;
+    }
+
+    @media (max-width: 48rem) {
+        .main {
+            padding: 0 16px;
+        }
+
+        .text-h2-bold,
+        .text-h2-medium {
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        .text-h5-bold,
+        .text-h5-medium {
+            font-size: 14px;
+            line-height: 22px;
+        }
+
+        .text-t1-bold,
+        .text-t1-medium {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .text-h4-bold,
+        .text-h4-medium {
+            font-size: 16px;
+            line-height: 24px;
+        }
+
+        .text-h5-bold,
+        .text-h5-medium {
+            font-size: 15px;
+            line-height: 22px;
+        }
+
+        .text-h3-bold {
+            font-size: 20px;
+            line-height: 32px;
+        }
+
+        .text-b3-medium {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .text-b1-medium {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .text-b2-medium {
+            font-size: 12px;
+            line-height: 16px;
+        }
     }
 }
 

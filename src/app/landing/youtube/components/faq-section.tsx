@@ -64,14 +64,17 @@ const FaqSectionTitle = () => {
                 <span className={'text-h2-bold'}>자주 묻는 질문</span>들만
             </span>
 
-            <div className={'flex items-center space-x-3 relative'}>
+            <div className={'flex items-center relative'}>
                 <span>모아봤어요</span>
+
                 <Image
-                    className={'absolute -right-[50px]'}
+                    className={
+                        'absolute -right-[62px] w-[50px] h-[50px] max-md:w-[28px] max-md:h-[28px] max-md:-right-[36px]'
+                    }
                     src={'/images/faq-info-1.svg'}
                     alt={'Solution'}
-                    width={50}
-                    height={50}
+                    width={0}
+                    height={0}
                 />
             </div>
         </div>

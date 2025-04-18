@@ -24,8 +24,7 @@ export const SolutionSection = () => {
                     }
                     image={
                         <Image
-                            width={160}
-                            height={160}
+                            fill
                             alt={'Solution 1'}
                             src={'/images/system-update.gif'}
                         />
@@ -43,8 +42,7 @@ export const SolutionSection = () => {
                     }
                     image={
                         <Image
-                            width={160}
-                            height={160}
+                            fill
                             alt={'Solution 2'}
                             src={'/images/online-article-writing.gif'}
                         />
@@ -64,8 +62,7 @@ export const SolutionSection = () => {
                     }
                     image={
                         <Image
-                            width={160}
-                            height={160}
+                            fill
                             alt={'Solution 3'}
                             src={'/images/video-feedback.gif'}
                         />
@@ -83,8 +80,7 @@ export const SolutionSection = () => {
                     }
                     image={
                         <Image
-                            width={160}
-                            height={160}
+                            fill
                             alt={'Solution 4'}
                             src={'/images/web-video.gif'}
                         />
@@ -101,8 +97,7 @@ export const SolutionSection = () => {
                     }
                     image={
                         <Image
-                            width={160}
-                            height={160}
+                            fill
                             alt={'Solution 4'}
                             src={'/images/product-release.gif'}
                         />
@@ -121,17 +116,22 @@ const SolutionSectionTitle = () => {
             }
         >
             그래서,
-            <div className={'flex items-center space-x-3'}>
+            <div className={'flex items-center relative'}>
                 <Image
+                    className={
+                        'absolute -left-[96px] w-[84px] h-[50px] max-md:w-[48px] max-md:h-[28px] max-md:-left-[56px] '
+                    }
                     src={'/images/solution-info-1.svg'}
                     alt={'Solution'}
-                    width={84}
-                    height={50}
+                    width={0}
+                    height={0}
                 />
-                <span className={'text-h2-bold'}>적은 비용</span>
-                으로
+                <span>
+                    <span className={'text-h2-bold'}>적은 비용</span>
+                    으로
+                </span>
             </div>
-            <div className={'flex items-center space-x-3'}>
+            <div className={'flex items-center relative'}>
                 <span>
                     <span className={'text-h2-bold'}>
                         효과가 좋은 실전 노하우
@@ -139,10 +139,13 @@ const SolutionSectionTitle = () => {
                     를 담은
                 </span>
                 <Image
+                    className={
+                        'absolute -right-[62px] w-[50px] h-[50px] max-md:w-[28px] max-md:h-[28px] max-md:-right-[36px]'
+                    }
                     src={'/images/solution-info-2.svg'}
                     alt={'Solution'}
-                    width={50}
-                    height={50}
+                    width={0}
+                    height={0}
                 />
             </div>
             멘토스를 기획했습니다
