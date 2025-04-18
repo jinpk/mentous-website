@@ -111,3 +111,17 @@ button {
         margin: auto;
     }
 }
+
+@keyframes blink {
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.blink-dot {
+    animation: blink 2s ease-in-out infinite;
+}

@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { Nav } from '@/components/nav'
-import { Footer } from '@/components/footer'
+import { Nav } from '@/components/layout/nav'
+import { Footer } from '@/components/layout/footer'
 import localFont from 'next/font/local'
+import React from 'react'
+import { SessionProvider } from 'next-auth/react'
 
 const fontGmarketSans = localFont({
     src: [
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     description: '유튜브 채널 성장은 멘토스',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode
@@ -38,11 +40,15 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={`${fontGmarketSans.variable} antialiased`}>
-                <div className={'w-full flex flex-col relative min-h-screen'}>
-                    <Nav />
-                    {children}
-                    <Footer />
-                </div>
+                <SessionProvider>
+                    <div
+                        className={'w-full flex flex-col relative min-h-screen'}
+                    >
+                        <Nav />
+                        {children}
+                        <Footer />
+                    </div>
+                </SessionProvider>
             </body>
         </html>
     )

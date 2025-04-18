@@ -1,21 +1,15 @@
 'use client'
 
-import { ReactNode } from 'react'
+import { ButtonHTMLAttributes } from 'react'
 import clsx, { ClassValue } from 'clsx'
 
 type Color = 'accent-blue' | 'primary'
 
-export const Button = ({
-    children,
-    color,
-}: {
-    children: ReactNode
-    color?: Color
-}) => {
-    if (!color) {
-        color = 'primary'
-    }
-
+export const Button = (
+    props: {
+        color?: Color
+    } & ButtonHTMLAttributes<HTMLButtonElement> = { color: 'primary' }
+) => {
     const colorClasses: { [key in Color]: ClassValue } = {
         ['primary']:
             'bg-primary text-neutral-100 hover:bg-primary-20' as ClassValue,
@@ -25,15 +19,17 @@ export const Button = ({
 
     return (
         <button
+            {...props}
             className={clsx(
                 'transition-all',
-                colorClasses[color],
+                colorClasses[props.color || 'primary'],
                 'py-3 px-4 rounded',
                 'text-b1-medium',
-                'cursor-pointer'
+                'cursor-pointer',
+                props.className
             )}
         >
-            {children}
+            {props.children}
         </button>
     )
 }
