@@ -13,6 +13,32 @@ import clsx from 'clsx'
 
 export const Problems = ({ children }: { children: ReactNode }) => {
     const [inViewIndex, setInViewIndex] = useState(0)
+    const itemRefs = useRef<(HTMLDivElement | null)[]>([])
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const viewportHeight = window.innerHeight
+
+            const newIndex = itemRefs.current.findIndex((el, idx) => {
+                if (!el) return false
+                const rect = el.getBoundingClientRect()
+                const ratio = rect.bottom / viewportHeight
+                return (
+                    (idx === 0 && ratio <= 1 && ratio > 0.85) || // 첫 번째: 화면 60%쯤에 도달
+                    (idx === 1 && ratio <= 0.85 && ratio > 0.65) || // 두 번째: 화면 30~60% 사이
+                    (idx === 2 && ratio <= 0.65) // 세 번째: 화면 하단 근처
+                )
+            })
+
+            if (newIndex !== -1 && newIndex !== inViewIndex) {
+                setInViewIndex(newIndex)
+            }
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [inViewIndex])
+
     return (
         <div
             className={
@@ -22,21 +48,25 @@ export const Problems = ({ children }: { children: ReactNode }) => {
             {Children.map(children, (child, index) => {
                 if (!isValidElement<ProblemProps>(child)) return child
 
-                return cloneElement(child, {
-                    key: index,
-                    inView: index === inViewIndex,
-                    onInView: () => {
-                        setInViewIndex(index)
-                    },
-                })
+                return (
+                    <div
+                        key={index}
+                        ref={(el) => {
+                            itemRefs.current[index] = el
+                        }}
+                    >
+                        {cloneElement(child, {
+                            focused: index === inViewIndex,
+                        })}
+                    </div>
+                )
             })}
         </div>
     )
 }
 
 interface ProblemProps {
-    inView?: boolean
-    onInView?: () => void
+    focused?: boolean
     children: ReactNode
     image: ReactNode
     number: ReactNode
@@ -48,37 +78,15 @@ export const Problem = ({
     number,
     image,
     title,
-    inView,
-    onInView,
+    focused,
 }: ProblemProps) => {
-    const ref = useRef<HTMLDivElement | null>(null)
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting && onInView) {
-                    onInView()
-                }
-            },
-            {
-                threshold: 0.5,
-            }
-        )
-
-        if (ref.current) {
-            observer.observe(ref.current)
-        }
-
-        return () => observer.disconnect()
-    }, [onInView])
-
     return (
         <div
-            ref={ref}
             className={clsx(
                 'rounded p-8  flex flex-col aspect-square transition-all max-md:aspect-auto max-md:space-y-6',
-                inView
-                    ? '!text-neutral-0 bg-[#FFEAE2]'
+                'transition-colors duration-100',
+                focused
+                    ? '!text-neutral-0 bg-[#FFEAE2] bg-light-sunset'
                     : 'text-neutral-10 bg-neutral-95'
             )}
         >
@@ -87,7 +95,7 @@ export const Problem = ({
                     <div
                         className={clsx(
                             'flex items-center justify-center w-[58px] h-[58px]  rounded-full',
-                            inView ? 'bg-neutral-0' : 'bg-neutral-10'
+                            focused ? 'bg-neutral-0' : 'bg-neutral-10'
                         )}
                     >
                         {image}
