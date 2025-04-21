@@ -45,7 +45,7 @@ export const FaqSection = () => {
                     <br />
                     적극 반영됩니다
                 </span>
-                <Link href={'/'}>
+                <Link href={'/?to=feedback'}>
                     <Button color={'accent-blue'}>문의하기</Button>
                 </Link>
             </div>

@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/footer'
 import localFont from 'next/font/local'
 import React from 'react'
 import { SessionProvider } from 'next-auth/react'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const fontGmarketSans = localFont({
     src: [
@@ -57,6 +58,8 @@ export default async function RootLayout({
                     </div>
                 </SessionProvider>
             </body>
+
+            <GoogleAnalytics gaId={process.env.GA_ID as string} />
         </html>
     )
 }

@@ -3,10 +3,19 @@ import { auth } from '@/lib/auth'
 import { redirect } from 'next/navigation'
 import { FeedbackForm } from '@/app/(home)/components/feedback-form'
 
-export default async function Home() {
+export default async function Home({
+    searchParams,
+}: {
+    searchParams: Promise<{ to?: string }>
+}) {
     const session = await auth()
 
+    const { to } = await searchParams
+
     if (!session) {
+        if (to) {
+            redirect('/signup')
+        }
         redirect('/landing/youtube')
     }
 

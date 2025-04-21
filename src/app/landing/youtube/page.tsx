@@ -6,6 +6,7 @@ import { CallToJoinSection } from '@/app/landing/youtube/components/call-to-join
 import { PricingSection } from '@/app/landing/youtube/components/pricing-section'
 import { FaqSection } from '@/app/landing/youtube/components/faq-section'
 import clsx from 'clsx'
+import { SystemSection } from '@/app/landing/youtube/components/system-section'
 
 export default function Page() {
     return (
@@ -20,6 +21,7 @@ export default function Page() {
                 <ProblemSection />
                 <ProblemRemindSection />
                 <SolutionSection />
+                <SystemSection />
                 <PricingSection />
                 <CallToJoinSection />
                 <FaqSection />
